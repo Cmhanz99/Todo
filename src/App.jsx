@@ -1,8 +1,8 @@
-  import React, { useEffect, useState } from "react";
-  import TodoInput from "./components/TodoInput";
-  import TodoList from "./components/TodoList";
+import React, { useEffect, useState } from "react";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
-  const App = () => {
+const App = () => {
   const [todos, setTodos] = useState(() => {
     const savedTodos = JSON.parse(localStorage.getItem("item"));
     return savedTodos ? savedTodos : [];
@@ -43,10 +43,14 @@
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12 px-4">
       <div className="w-full max-w-md mb-8">
-        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-2">Todo App</h1>
-        <p className="text-gray-500 text-center">Keep track of your daily tasks</p>
+        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-2">
+          Todo App
+        </h1>
+        <p className="text-gray-500 text-center">
+          Keep track of your daily tasks
+        </p>
       </div>
-      
+
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden p-6 mb-6">
         <TodoInput
           task={task}
@@ -55,7 +59,7 @@
           handleKey={handleKey}
         />
       </div>
-      
+
       <TodoList
         todos={todos}
         handleDelete={handleDelete}
@@ -63,6 +67,10 @@
         done={done}
         setDone={setDone}
       />
+
+      <footer class="text-black text-center p-2 mt-3">
+        <p>&copy; 2025 Hanz. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
