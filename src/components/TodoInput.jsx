@@ -14,7 +14,7 @@ const TodoInput = ({ task, setTask, handleClick, handleKey }) => {
           onClick={handleClick}
           className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 transition-colors duration-200"
         >
-          Add
+          +
         </button>
       </div>
     </div>
